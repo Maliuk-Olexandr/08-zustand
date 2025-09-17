@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'NoteHub',
     description: 'A simple note-taking app',
-    url: 'https://notehub.app',
+    url: 'https://08-zustand-kappa-nine.vercel.app',
     siteName: 'NoteHub',
     images: [
       {

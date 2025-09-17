@@ -4,10 +4,11 @@ import css from './NoteDetails.module.css';
 import { useQuery } from '@tanstack/react-query';
 import { fetchNoteById } from '@/lib/api';
 import { useParams } from 'next/navigation';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 
 export default function NoteDetails() {
+  const router = useRouter();
   const { id } = useParams<{ id: string }>();
   const { data: note, isLoading, error } = useQuery({
     queryKey: ['notes', id],
@@ -20,9 +21,9 @@ export default function NoteDetails() {
 
   return (
     <div className={css.container}>
-      <Link href={`/notes`} className={css.backLink}>
+      <button onClick={() => router.back()} className={css.backLink}>
         Back to notes
-      </Link>
+      </button>
       <div className={css.item}>
         <div className={css.header}>
           <h2>{note.title}</h2>
