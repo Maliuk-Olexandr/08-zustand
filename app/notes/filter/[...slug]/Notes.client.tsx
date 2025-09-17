@@ -53,7 +53,7 @@ export default function Notes({ tag }: Props) {
             onPageChange={setCurrentPage}
           />
         )}
-        <Link href="/notes/actions/create" className={css.button}>
+        <Link href="/notes/action/create" className={css.button}>
           Create note +
         </Link>
       </div>
